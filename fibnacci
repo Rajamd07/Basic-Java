@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Hello{
+    
+    public static void main(String[] args)  {
+        
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter a Final range: ");
+            int count = sc.nextInt()-2;
+            int curNum = 1;
+            int prevNum =0;
+            
+            System.out.println(0);
+            System.out.println(1);
+            while(count>0){
+                int temp = curNum+prevNum;
+                System.out.println(temp);
+                
+                prevNum = curNum;
+                curNum =temp;
+                count--;
+            }
+        }
+        }
+    }
