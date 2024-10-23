@@ -25,3 +25,76 @@ public static void main(String[] args)  {
     }
 
     }
+
+
+/////////////////////////////////////////////////////////////////
+// Between Range
+static Boolean isPrime(int num){
+        boolean flag = true;
+        if(num<=0 || num==1){
+            flag = false;
+        }
+         else if(num == 2){
+            flag = true;
+        }
+        else{
+        for(int i=2 ; i<=num/2 ; i++){
+            if(num % i == 0){
+                flag =false;
+                break;
+            }
+        }
+        }
+    return flag;
+}
+    public static void main(String[] args)  {
+        try(Scanner sc = new Scanner(System.in)){
+            System.out.print("Enter a starting number : ");
+            int sts = sc.nextInt();
+            System.out.print("Enter a ending number : ");
+            int end = sc.nextInt();
+            for(int i = sts ; i<=end ; i++){
+                if(isPrime(i)){
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+
+////////////////////////////////////////
+// first n prime number
+
+static Boolean isPrime(int num){
+        boolean flag = true;
+        if(num<=0 || num==1){
+            flag = false;
+        }
+         else if(num == 2){
+            flag = true;
+        }
+        else{
+        for(int i=2 ; i<=num/2 ; i++){
+            if(num % i == 0){
+                flag =false;
+                break;
+            }
+        }
+        }
+    return flag;
+}
+    public static void main(String[] args)  {
+        try(Scanner sc = new Scanner(System.in)){
+            System.out.print("Enter a number : ");
+            int n = sc.nextInt();
+            int brk = 1;
+
+            for(int i = 1 ; brk<=n ; i++){
+            
+                if(isPrime(i)){
+                    System.out.println(i);
+
+               brk++;
+                }
+            }
+            }
+        }
