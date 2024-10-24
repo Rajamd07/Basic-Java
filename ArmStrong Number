@@ -1,0 +1,35 @@
+tatic int sumOfDigits(int num){
+        int sum =0;
+        while(num>0){
+            num /=10;
+            sum++;
+        }
+        return sum;
+    }
+
+    static int powerOf(int base, int power){
+        int result = 1 ;
+        for(int i =1; i<=power; i++){
+            result *=base;
+        }
+        return result;
+    }
+
+    public static void main(String[] args)  {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter a number : ");
+            int input = sc.nextInt();
+            int n = input;
+            int digit = sumOfDigits(input);
+
+            int armStrong = 0;
+            for(int i =0 ; i <= digit ; i++){
+                int rem = n %10;
+                armStrong  =armStrong + powerOf(rem, digit);
+                n /=10;
+            }
+            if(input == armStrong){
+                System.out.println("yes");
+            } else{
+                System.out.println("No");
+            }
